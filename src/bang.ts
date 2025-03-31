@@ -3,12 +3,12 @@
 export const bangs = [
   {
     c: "AI",
-    d: "www.t3.chat",
+    d: "www.chatgpt.com",
     r: 0,
-    s: "T3 Chat",
+    s: "ChatGPT",
     sc: "AI",
-    t: "t3",
-    u: "https://www.t3.chat/new?q={{{s}}}",
+    t: "chats",
+    u: "https://chatgpt.com/?q={{{s}}}&hints=search",
   },
   {
     c: "AI",
@@ -16,8 +16,17 @@ export const bangs = [
     r: 0,
     s: "ChatGPT",
     sc: "AI",
-    t: "chatgpt",
-    u: "https://www.chatgpt.com/search?q={{{s}}}",
+    t: "chat",
+    u: "https://www.chatgpt.com/?q={{{s}}}",
+  },
+  {
+    c: "AI",
+    d: "www.t3.chat",
+    r: 0,
+    s: "T3 Chat",
+    sc: "AI",
+    t: "t3",
+    u: "https://www.t3.chat/new?q={{{s}}}",
   },
   {
     c: "Tech",
@@ -17023,7 +17032,7 @@ export const bangs = [
     r: 3580,
     s: "Duck.ai",
     sc: "Reference",
-    t: "chat",
+    t: "duckai",
     u: "https://www.duckduckgo.com/?q={{{s}}}&ia=chat&bang=true ",
   },
   {
