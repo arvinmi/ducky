@@ -16,7 +16,7 @@ export const bangs = [
     r: 0,
     s: "Openweb",
     sc: "AI",
-    t: "chata",
+    t: "chatam",
     u: "https://chat.arvinmir.com/?q={{{s}}}",
   },
   {
