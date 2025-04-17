@@ -2,15 +2,6 @@
 
 export const bangs = [
   {
-    c: "Tech",
-    d: "https://aistudio.google.com/prompts/new_chat",
-    r: 0,
-    s: "Google AI Studio",
-    sc: "Tech",
-    t: "aistudio",
-    u: "https://aistudio.google.com/prompts/new_chat?q={{{s}}}",
-  },
-  {
     c: "Social",
     d: "www.x.com",
     r: 0,
@@ -18,6 +9,24 @@ export const bangs = [
     sc: "Social",
     t: "x",
     u: "https://x.com/search?q={{{s}}}",
+  },
+  {
+    c: "Tech",
+    d: "www.claude.ai",
+    r: 0,
+    s: "Claude",
+    sc: "Tech",
+    t: "claude",
+    u: "https://claude.ai/new?q={{{s}}}",
+  },
+  {
+    c: "Tech",
+    d: "www.aistudio.google.com",
+    r: 0,
+    s: "Google AI Studio",
+    sc: "Tech",
+    t: "aistudio",
+    u: "https://aistudio.google.com/prompts/new_chat?q={{{s}}}",
   },
   {
     c: "Tech",
