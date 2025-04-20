@@ -25,7 +25,7 @@ export const bangs = [
     r: 0,
     s: "Google AI Studio",
     sc: "Tech",
-    t: "aistudio",
+    t: "aist",
     u: "https://aistudio.google.com/prompts/new_chat?q={{{s}}}",
   },
   {
@@ -61,7 +61,7 @@ export const bangs = [
     r: 0,
     s: "ChatGPT",
     sc: "AI",
-    t: "chatgptn",
+    t: "gptn",
     u: "https://chatgpt.com/?q={{{s}}}&temporary-chat=true&model=gpt-4o-mini",
   },
   {
@@ -70,7 +70,7 @@ export const bangs = [
     r: 0,
     s: "ChatGPT",
     sc: "AI",
-    t: "chatgpts",
+    t: "gpts",
     u: "https://www.chatgpt.com/?q={{{s}}}&hints=search",
   },
   {
@@ -79,7 +79,7 @@ export const bangs = [
     r: 0,
     s: "ChatGPT",
     sc: "AI",
-    t: "chatgpt",
+    t: "gpt",
     u: "https://www.chatgpt.com/?q={{{s}}}",
   },
   {
