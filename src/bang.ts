@@ -12,6 +12,15 @@ export const bangs = [
   },
   {
     c: "Tech",
+    d: "www.gemini.google.com",
+    r: 0,
+    s: "Gemini",
+    sc: "Tech",
+    t: "gem",
+    u: "https://gemini.google.com/app?q={{{s}}}",
+  },
+  {
+    c: "Tech",
     d: "www.claude.ai",
     r: 0,
     s: "Claude",
