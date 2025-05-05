@@ -2,6 +2,15 @@
 
 export const bangs = [
   {
+    c: "Tech",
+    d: "https://todoist.com",
+    r: 0,
+    s: "Todoist",
+    sc: "Tech",
+    t: "todo",
+    u: "https://todoist.com",
+  },
+  {
     c: "Education",
     d: "https://canvas.oregonstate.edu",
     r: 0,
