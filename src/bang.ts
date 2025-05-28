@@ -89,7 +89,7 @@ export const bangs = [
     s: "ChatGPT",
     sc: "AI",
     t: "gptn",
-    u: "https://chatgpt.com/?q={{{s}}}&temporary-chat=true&model=gpt-4o-mini",
+    u: "https://chatgpt.com/?q={{{s}}}&temporary-chat=true&model=gpt-4-1-mini",
   },
   {
     c: "AI",
