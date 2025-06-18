@@ -48,26 +48,63 @@ function getBangredirectUrl() {
     return null;
   }
 
-  const match = query.match(/!(\S+)/i);
+  // Split query into separate words separated by spaces
+  const words = query.split(/\s+/);
 
-  const bangCandidate = match?.[1]?.toLowerCase();
-  const selectedBang = bangs.find((b) => b.t === bangCandidate) ?? defaultBang;
+  let selectedBang = defaultBang;
+  let cleanQuery = query;
 
-  // Remove the first bang from the query
-  const cleanQuery = query.replace(/!\S+\s*/i, "").trim();
+  // Find bang match
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i].toLowerCase();
 
-  // If the query is just `!gh`, use `github.com` instead of `github.com/search?q=`
-  // if (cleanQuery === "")
-  //   return selectedBang ? `https://${selectedBang.d}` : null;
+    // Check if word matches any bangs
+    const foundBang = bangs.find((b) => b.t === word);
 
-  // Format of the url is:
-  // https://www.google.com/search?q={{{s}}}
-  const searchUrl = selectedBang?.u.replace(
-    "{{{s}}}",
-    // Replace %2F with / to fix formats like "!ghr+t3dotgg/unduck"
-    encodeURIComponent(cleanQuery).replace(/%2F/g, "/"),
-  );
+    if (foundBang) {
+      selectedBang = foundBang;
+
+      // Remove bang from query
+      const queryWords = [...words];
+      queryWords.splice(i, 1);
+
+      cleanQuery = queryWords.join(" ").trim();
+      break;
+    }
+  }
+
+  // Still allow !bang format
+  const traditionalMatch = query.match(/!(\S+)/i);
+  if (traditionalMatch) {
+    const bangCandidate = traditionalMatch[1]?.toLowerCase();
+    const traditionalBang = bangs.find((b) => b.t === bangCandidate);
+
+    if (traditionalBang) {
+      selectedBang = traditionalBang;
+      // Remove !bang from query
+      cleanQuery = query.replace(/!\S+\s*/i, "").trim();
+    }
+  }
+
+  let searchUrl = selectedBang?.u;
+
   if (!searchUrl) return null;
+
+  if (cleanQuery.trim() === "") {
+    // If the query is just `!gpt`, use `chatgpt.com/?model=gpt-4-1` instead of `chatgpt.com?q={{{s}}}`
+    searchUrl = searchUrl.replace(/[?&]q={{{s}}}/, "");
+
+    // Add back leading params if they exist
+    if (searchUrl.includes("&") && !searchUrl.includes("?")) {
+      searchUrl = searchUrl.replace("&", "?");
+    }
+  } else {
+    searchUrl = searchUrl.replace(
+      "{{{s}}}",
+      // Replace %2F with / to fix formats like "ghr+t3dotgg/unduck"
+      encodeURIComponent(cleanQuery).replace(/%2F/g, "/"),
+    );
+  }
 
   return searchUrl;
 }
