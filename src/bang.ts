@@ -30,6 +30,15 @@ export const bangs = [
   },
   {
     c: "AI",
+    d: "chat.deepseek.com",
+    r: 0,
+    s: "Deepseek",
+    sc: "AI",
+    t: "ds",
+    u: "https://chat.deepseek.com/?q={{{s}}}",
+  },
+  {
+    c: "AI",
     d: "gemini.google.com",
     r: 0,
     s: "Gemini",
