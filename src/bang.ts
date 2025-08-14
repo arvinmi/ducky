@@ -97,7 +97,7 @@ export const bangs = [
     r: 0,
     s: "ChatGPT",
     sc: "AI",
-    t: "gpt5t",
+    t: "gptt",
     u: "https://www.chatgpt.com/?q={{{s}}}&model=gpt-5-thinking",
   },
   {
@@ -116,7 +116,7 @@ export const bangs = [
     s: "ChatGPT",
     sc: "AI",
     t: "gpt",
-    u: "https://www.chatgpt.com/?q={{{s}}}",
+    u: "https://www.chatgpt.com/?q={{{s}}}&model=gpt-5",
   },
   {
     c: "AI",
