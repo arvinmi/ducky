@@ -52,7 +52,7 @@ export const bangs = [
     r: 0,
     s: "Claude",
     sc: "AI",
-    t: "claude",
+    t: "cld",
     u: "https://claude.ai/new?q={{{s}}}",
   },
   {
